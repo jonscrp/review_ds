@@ -1,7 +1,8 @@
 package Queue;
 
+import java.util.Iterator;
 // Link list implementation
-class Queue<Item>{
+class Queue<Item> implements Iterable<Item>{
 
     // Nested class
     class Node{
@@ -32,59 +33,75 @@ class Queue<Item>{
     // Queue constructor
     // Creates an empty queue
     Queue(){
-        Node tail = null; // points to the end of a link list
-        Node head = tail; // points to the beggining of a link list
+        tail = null; // points to the end of a link list
+        head = tail; // points to the beggining of a link list
     }
 
     boolean isEmpty(){ if(size == 0){return true;} return false;}
 
     // Queue Methods 
+    // Adding an item
     void enqeueu(Item data){
 
-        // First attempt
-        // The issue of this implementation is that to deque I would have to traverse 
-        // to the tail inorder to retrieve the last element. This will take O(n) time 
-
-        // add first item
-        /* 
         if(size == 0){
             head = new Node(tail, data);
-        } else{
-            Node current = head;
-            while(current.getNext() != null){
-                current = current.getNext();  
-            }
-            current.setNext(new Node(tail, data));
-        }
-        */
-
-        // Second attempt 
-        // This approach is better than the previous one since it add a new element to the beginning
-        // of the link list which allows us to deque(remove the element at the top) elements from the
-        // beginning of the link list instead of having to travese through the entire LL as the previous approach did. 
-        // this take O(1) 
-        if(size == 0){
-            head = new Node(tail, data);
-        }else {
-            Node tmp = head; // top element
-            head = new Node(tmp.getNext(), data); // add new element and set as the "head"
+        }else{
+         Node current = head;
+         while(current.getNext() != tail){
+            current = current.getNext();
+         }   
+         current.setNext(new Node(tail, data));
         }
         size++; // Number of items in the list increments by 1
     }
     
+    // Removing an item
     Item deque(){
-
-        return 
+        if( size == 0){
+            System.out.println("Qeueue is empty");
+            return null;
+        }
+        Node tmp = head;
+        head = (tmp.getNext() == tail) ? tail : tmp.getNext();
+        tmp.setNext( null);
+        size--;        
+        return tmp.getData();
     }
 
+    // Return Iterable object
+    public Iterator<Item> iterator(){
+        return new QueueIterator();
+    }
 
-
+    private class QueueIterator implements Iterator<Item>{
+        Node current = head;
+        public boolean hasNext(){
+            if(current.getNext() != tail){return true;}
+            return false;
+        }
+        public Item next(){
+            current = current.getNext();
+            return current.getData();
+        }
+        public void remove(){};
+    }
 
     // Testing 
     public static void main(String args){
-
-
+        Queue<Integer> m = new Queue<Integer>();
+        System.out.println("Qeueue size:");
+        System.out.print( m.size + "\n");
+        // Store Items in the queue
+        for(int i = 0; i < 10; i=i*2){
+            System.out.println("Stored value: " + i);
+            m.enqeueu(i);
+        }
+        System.out.println("Qeueue size:");
+        System.out.print( m.size + "\n");
+        System.out.println("Values in the queueu");
+        for(Integer item: m){
+            System.out.println(item);
+        }
+        System.out.println("END!");
     }
-
-
 }
