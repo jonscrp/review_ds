@@ -7,13 +7,13 @@ class Queue<Item> implements Iterable<Item> {
         Item data;
         Node next;
     }
-    Node last;
+    Node tail;
     Node head;
     int size = 0;
     // Queue constructor
     // Creates an empty queue
     Queue(){
-        last = null; // points to the first element of the LL
+        tail = null; // points to the first element of the LL
         head = null; // points to the last elments of the LL
     }
 
@@ -21,15 +21,14 @@ class Queue<Item> implements Iterable<Item> {
     // Queue Methods 
     // Adding an item
     void enqeueu(Item data){
-        if(size == 0){
-            head = last = new Node();
-            head.next = null;
-            head.data = data;
+        Node oldtail = tail;
+        tail = new Node();
+        tail.next = null;
+        tail.data = data;
+        if(isEmpty()){
+            head = tail;
         }else{
-            Node oldfirst = head;
-            head = new Node();
-            head.next = oldfirst;
-            head.data = data;
+            oldtail.next = tail;
         }
         size++; // Number of items in the list increments by 1
     }
@@ -42,7 +41,8 @@ class Queue<Item> implements Iterable<Item> {
         }
         Item element = head.data;
         head = head.next;
-        size--;        
+        size--; 
+        if(isEmpty()){ tail = null;}       
         return element;
     }
 

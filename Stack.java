@@ -19,17 +19,10 @@ public class Stack<Item> implements Iterable<Item> {
     }
 
     public void push(Item data){
-        if(size == 0){
-            head = new Node();
-            head.data = data;
-            tail = head;
-        } else{
-            Node oldtail = tail;
-            tail = new Node();
-            tail.data = data;
-            tail.next = null;
-            oldtail.next = tail;
-        }
+        Node oldhead = head;
+        head = new Node();
+        head.data = data;
+        head.next = oldhead;
         size++;
     }
 
