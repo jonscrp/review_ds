@@ -5,7 +5,19 @@ class ListNode:
 
     
 
+
+# Runtime 
+# __len__() = O(1)
+# traversal() = O(n)
+# prepending() = O(1)
+# addLast() = O(1) // this is achieved with the addition of a the last" refence variable
+# deleteFirst() =  O(1)
+# deleteItem()  =  O(n)
+
+# Note: n represents the number of elements in the list
 class SingleLinkList:
+
+    
 
     def __init__(self):
         self.head = None
@@ -24,8 +36,6 @@ class SingleLinkList:
             print (curNode.data)
             curNode = curNode.next
 
-    def getHead(self):
-        return self.head
 
     # adding elements to the front
     def prepending(self, item):
@@ -55,7 +65,7 @@ class SingleLinkList:
             return tmp 
     
         
-    def delete(self, k):
+    def deleteItem(self, Item):
         if self.size == 0:
             return
         
