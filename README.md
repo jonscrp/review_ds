@@ -1,17 +1,19 @@
-# Reviwing Data Structures and Algorithms
+# Reviewing Data Structures and Algorithms
 
 > You will find some of my python implementations and some answers to hacker rank questions.
 
 ### Current Data Structures Implemented 
-    - SingleLinkList 
-    - Stack
+    - Single LinkList 
+    - Doubly LinkList
+    - Stacks
     - Queue
 
 ### In progress 
+    - Heaps
     - Binary Tree and Graphs (Matrix and Array-Linklist representation )
 
 
-# Algorithms in progress 
+### Algorithms in progress 
     - Prims
     - Djakstra
     - DFS
@@ -22,5 +24,6 @@
     - MergerSort
     - InsertionSort
     - SelectionSort
+    - HeapSort
 
 
