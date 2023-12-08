@@ -17,8 +17,6 @@ class ListNode:
 # Note: n represents the number of elements in the list
 class SingleLinkList:
 
-    
-
     def __init__(self):
         self.head = None
         self.tail = None
