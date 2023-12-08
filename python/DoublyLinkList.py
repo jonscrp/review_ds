@@ -43,7 +43,7 @@ class DoublyLinkList:
         else:
             obj = ListNode(position, item)
             curNode = self.head
-            while curNode  != self.trailer:
+            while curNode  :
                 if (curNode.position <= position):
                     self.insertBefore(curNode,obj)
                     self.size = self.size + 1
