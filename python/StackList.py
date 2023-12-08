@@ -1,4 +1,5 @@
 
+# LIFO principle
 
 import LinkList
 class Stack:
