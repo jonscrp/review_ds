@@ -3,14 +3,12 @@ class ListNode:
         self.data = data
         self.next = None
 
-    
-
 
 # Runtime 
 # __len__() = O(1)
 # traversal() = O(n)
 # prepending() = O(1)
-# addLast() = O(1) // this is achieved with the addition of a the last" refence variable
+# addLast() = O(1) // this is achieved with the addition of a the "last" refence variable
 # deleteFirst() =  O(1)
 # deleteItem()  =  O(n)
 
@@ -63,7 +61,7 @@ class SingleLinkList:
             return tmp 
     
         
-    def deleteItem(self, Item):
+    def deleteItem(self, item):
         if self.size == 0:
             return
         
@@ -75,7 +73,7 @@ class SingleLinkList:
             return
        
         while curNode.next != None:
-            if curNode.next.data == k:
+            if curNode.next.data == item:
                 curNode.next = curNode.next.next 
                 self.size = self.size - 1 
                 break
