@@ -12,7 +12,7 @@ Until the smaller subproblem is solvable. Then we can combine this smaller subpr
 
 Examples:
 
-[__Binary Search__](/binarySearch.py)
+[__Binary Search__](/python/Algorithms/MergeSort.py)
 
 Given a list of elements a = [1,2,3,4, 5, ... n-1, n], find k 
     
