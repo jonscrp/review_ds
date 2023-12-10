@@ -12,7 +12,7 @@ Until the smaller subproblem is solvable. Then we can combine this smaller subpr
 
 Examples:
 
-[__Binary Search__](python/Algorithms/binarySearch.py)
+[__Binary Search__](/binarySearch.py)
 
 Given a list of elements a = [1,2,3,4, 5, ... n-1, n], find k 
     
@@ -20,12 +20,14 @@ Run Time:
 Theta(logn)
 
 
+
+
+[__MergeSort__](/MergeSort.py)
 Given a list of element o = [1,2,3,7,4,3,2] sort this list
-
-[__MergeSort__](python/Algorithms/MergeSort.py)
-
 Run time 
 Theta(nlogn)
+
+
 
 
 
