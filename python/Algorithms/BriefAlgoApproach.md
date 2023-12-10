@@ -9,23 +9,64 @@ Divides a problem into "a" sub problems of size "n/b".
 
 Until the smaller subproblem is solvable. Then we can combine this smaller subproblems upward until we have solved the original problem
 
+**Example:**
 
-Examples:
+Matrix Multiplication: 
+
+
+#### SORT
+
+Lower bound for sorting algorithms is OMEGA(nlogn)
+
+[__Selection Sort__]()
+
+Runtime: O(n^2)
+
+In-place
+used for small data sets ( < 1k)
+
+[__Insertion Sort__]()
+Runtime: O(n^2)
+NOTES: 
+in-place 
+used for small data sets (< 1k>)
+
+[__Heap Sort__]()
+Runtime: O(nlogn)
+in-place
+used for large data sets (1k-1m)
+
+
+***Divide and Conquer Examples** 
+
+[__Merge Sort__](/python/Algorithms/MergeSort.py)
+Run time : O(nlogn)
+Height: O(logn)
+NOTES:
+sequential data access
+used for huge datasets ( > 1m)
+
+[__Quick Sort__]()
+seudo linear time
+NOTES:
+in-place
+randomized 
+good for large inputs
+Worse case occurs when the pivot is the unique minimum or maximum element
+O(n^2)
+
+
+#### Search 
 
 [__Binary Search__](/python/Algorithms/MergeSort.py)
-
-Given a list of elements a = [1,2,3,4, 5, ... n-1, n], find k 
-    
 Run Time:
-Theta(logn)
+O(logn)
+NOTES:
 
 
 
 
-[__MergeSort__](/python/Algorithms/MergeSort.py)
-Given a list of element o = [1,2,3,7,4,3,2] sort this list
-Run time 
-Theta(nlogn)
+### Dynamic Programming
 
 
 

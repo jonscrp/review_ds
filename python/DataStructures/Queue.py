@@ -1,4 +1,4 @@
-import SingleLinkListLinkList
+import SingleLinkList
 
 # FIFO principle
 # Runtime of methods
@@ -10,7 +10,7 @@ import SingleLinkListLinkList
 class Queue:
     
     def __init__(self):
-        self.ll = SingleLinkListLinkList.SingleLinkList()
+        self.ll = SingleLinkList.SingleLinkList()
 
     def length(self):
         return len(self.ll)

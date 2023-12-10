@@ -1,10 +1,22 @@
+
+# Run time 
+# Build Heap = O(n)
+# max_heapify() = O(logn)
+# max() = O(1)s
+# inser() = O(logn)
+# deleteMax() = O(logn)
+# heapsort() = O(nlogn)
+
+# parent() = O(1)
+# left() = O(1)
+# right() = O(1)
+
 class BinaryHeap():
     
     def __BinaryHeap__(self, A):
         self.heap_size = 0
         self.A= A
 
-    
     def parent(self,i):
         return i//2
     
@@ -14,7 +26,6 @@ class BinaryHeap():
     def right(self, i):
         return 2*i + 1
     
-
     def exchange(self, i, j):
         tmp = self.A[i]
         self.A[i]  = self.A[j]
@@ -38,14 +49,11 @@ class BinaryHeap():
     def insert():
         pass
 
-    def findMin():
+    def max():
         pass
 
-    def deleteMin():
-        pass
-
-    def isEmpty():
-        pass
+    def isEmpty(self):
+        return self.heap_size == 0
 
     def buildHeap(self):
         self.heap_size = len(self.A)
