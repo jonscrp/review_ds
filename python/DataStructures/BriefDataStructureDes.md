@@ -22,4 +22,4 @@ A complete binary tree of height h has 2h and 2^(h+1) - 1 nodes. = O(logn)
 
 Array representation 
 
-[__BinaryHeap__]()
+[__BinaryHeap__](/python/Algorithms/BinarySearch.py)
