@@ -64,9 +64,11 @@ O(logn)
 NOTES:
 
 
-
-
 ### Dynamic Programming
+
+**The Binomial Coefficient**
+
+
 
 
 

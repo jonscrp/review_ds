@@ -21,6 +21,9 @@ def binDyn(n, k):
     i = 0
     j = 0
 
+    B[[] for ]
     for i in range(n):
         for j in range(min(i,k)):
-            
+            if(j == 0 or  j== i):
+                B[]
+
