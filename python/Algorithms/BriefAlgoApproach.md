@@ -22,7 +22,7 @@ Theta(logn)
 
 
 
-[__MergeSort__](/MergeSort.py)
+[__MergeSort__](python/Algorithms/MergeSort.py)
 Given a list of element o = [1,2,3,7,4,3,2] sort this list
 Run time 
 Theta(nlogn)
