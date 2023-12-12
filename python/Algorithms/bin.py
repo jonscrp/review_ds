@@ -1,5 +1,4 @@
-
-# Generating the binomial coefficient tree
+# Generating the binomial coefficient recursively
 def bin(n, k):
     if(k == 0 or n ==k):
         return 1
@@ -8,12 +7,9 @@ def bin(n, k):
 
 
 # Testing 
-
-
-
 # This kills our stack 
 # print(bin(9000,34))
-# We need a better aproach 
+# We need a better approach 
 
 # 3!/(2!(1!)) = 6/2 = 2
 
@@ -30,13 +26,11 @@ def binDyn(n, k):
                 b[i][j] = b[i - 1][j - 1] + b[i - 1][j]
             j = j + 1
         i = i + 1
-            
     return b[n][k]
 
 
 # Testing 
 
-print(binDyn(7,3))
+print(binDyn(9000,4))
 
 # Note to self: use while loops they are lot easier 
-
