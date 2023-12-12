@@ -12,8 +12,7 @@ g = [
 def PrimJarnikMST(g):
     vertex = g[0]
     distance = [0] * len(g)
-
     for v in vertex:
-        
+        pass
 
     

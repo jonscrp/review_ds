@@ -7,19 +7,18 @@
 - Doubly LinkList
 - Stacks
 - Queue
-
-### In progress 
 - Heaps
 - Binary Tree and Graphs (Matrix and Array-Linklist representation )
 
 
 ### Algorithms in progress 
-- Prims
-- Djakstra
+- Kruskal
+- Prim
+- Dijakstra
 - DFS
 - BFS
 
-### Search Algorithms in progress
+### Search Algorithms
 - InsertionSort
 - SelectionSort
 - MergerSort
